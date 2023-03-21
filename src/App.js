@@ -2,13 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 
 const salary = 5000;
-const singer = {name: 'Hero alom', job: 'singer'};
-const nayok = {name: 'Sakib Khan', job: 'actor'};
+const singer = { name: 'Hero alom', job: 'singer' };
+const nayok = { name: 'Sakib Khan', job: 'actor' };
 const singerStyle = {
   color: 'red'
 }
-const nayokStyle ={
-  backgroundColor:'purple'
+const nayokStyle = {
+  backgroundColor: 'purple'
 }
 
 function App() {
@@ -20,39 +20,39 @@ function App() {
       </div>
 
       <div className='industry'>
-          <p style={singerStyle}>Singer: {singer.name}, Job: {singer.job}, Salary:{salary + 2000}</p>
-          <p style={{backgroundColor:'yellow', color: 'blue'}}>Nayok: {nayok.name}, Job: {nayok.job}, Salary:{salary + 4000}</p>
+        <p style={singerStyle}>Singer: {singer.name}, Job: {singer.job}, Salary:{salary + 2000}</p>
+        <p style={{ backgroundColor: 'yellow', color: 'blue' }}>Nayok: {nayok.name}, Job: {nayok.job}, Salary:{salary + 4000}</p>
       </div>
 
-    <Person></Person>
-    <Person></Person>
-    <Person></Person>
-    <Person></Person>
-    <Person></Person>
-    <Person></Person>
-    <h1>Start New Component</h1>
-    <Friend></Friend>
-    <Friend></Friend>
-    <Friend></Friend>
-    <Friend></Friend>
+      <Person nickName="Krishna" girl="Urmi" situation="Married"></Person>
+      <Person nickName="Hridoy" girl="Aishee" situation="Un-Married"></Person>
+      <Person nickName="Prince" girl="Parboti" situation="Married"></Person>
+
+      
+      <h1>Start New Component</h1>
+      <Friend></Friend>
+      <Friend></Friend>
+      <Friend></Friend>
+      <Friend></Friend>
 
     </div>
   );
 }
 
 // Return HTML from a component:
-function Person(){
-  return(
+function Person(props) {
+  console.log(props);
+  return (
     <div className='mohon'>
-      <h2>Mohon Saha</h2>
-      <p>Web Developer</p>
+      <h2>Mohon Saha {props.nickName} + {props.girl}</h2>
+      <p>{props.situation}</p>
     </div>
   );
 }
 
 
-function Friend(){
-  return(
+function Friend() {
+  return (
     <div className='friend'>
       <h2>Subrata Sarket</h2>
       <p>CSE Student</p>
