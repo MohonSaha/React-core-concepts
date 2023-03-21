@@ -14,9 +14,6 @@ const nayokStyle ={
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>JSX</h1>
 
       <div className="container">
         <h2>Wellcome to react world</h2>
@@ -24,23 +21,41 @@ function App() {
 
       <div className='industry'>
           <p style={singerStyle}>Singer: {singer.name}, Job: {singer.job}, Salary:{salary + 2000}</p>
-          <p style={nayokStyle}>Nayok: {nayok.name}, Job: {nayok.job}, Salary:{salary + 4000}</p>
+          <p style={{backgroundColor:'yellow', color: 'blue'}}>Nayok: {nayok.name}, Job: {nayok.job}, Salary:{salary + 4000}</p>
       </div>
 
+    <Person></Person>
+    <Person></Person>
+    <Person></Person>
+    <Person></Person>
+    <Person></Person>
+    <Person></Person>
+    <h1>Start New Component</h1>
+    <Friend></Friend>
+    <Friend></Friend>
+    <Friend></Friend>
+    <Friend></Friend>
+
+    </div>
+  );
+}
+
+// Return HTML from a component:
+function Person(){
+  return(
+    <div className='mohon'>
+      <h2>Mohon Saha</h2>
+      <p>Web Developer</p>
+    </div>
+  );
+}
 
 
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function Friend(){
+  return(
+    <div className='friend'>
+      <h2>Subrata Sarket</h2>
+      <p>CSE Student</p>
     </div>
   );
 }
