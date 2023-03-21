@@ -1,3 +1,16 @@
+
+.container{
+  background-color: aquamarine;
+  color: red;
+  padding: 10px 16px;
+  border-radius: 16px;
+}
+
+
+
+
+
+
 .App {
   text-align: center;
 }
